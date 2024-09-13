@@ -40,9 +40,9 @@
                         {{ empleado.email }}
                     </td>
                     <td class="flex gap-x-3 px-6 py-4">
-                        <button class="text-center text-white bg-blue-500 rounded-md w-24 h-8">Actualiar</button>
+                        <button class="text-center text-white bg-blue-500 rounded-md w-24 h-8"[routerLink]="['/crud-frontend/actualizarempleados',empleado.id]">Actualiar</button>
                         <button class="text-center text-white bg-red-500  rounded-md w-24 h-8" (click)="eliminarEmpleado(empleado.id)" >Eliminar</button>
-                        <button class="text-center text-white bg-blue-500 rounded-md w-24 h-8">Detealles</button>
+                        <button class="text-center text-white bg-blue-500 rounded-md w-24 h-8" [routerLink]="['/crud-frontend/detalle-empleados',empleado.id]">Detealles</button>
                     </td>
                 </tr>
                 }

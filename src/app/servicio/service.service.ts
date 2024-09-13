@@ -27,4 +27,13 @@ export class ServiceService {
     return this.http.delete(`${this.api}/${id}`)
   }
 
+  obtenerEmpleadoPorId(id:number):Observable<Empleado>{
+    return this.http.get<Empleado>(`${this.api}/${id}`)
+  }
+
+  //este metodo sirve para actualizar el empleado
+  actualizarEmpleado(id: number, empleado: Empleado): Observable<Object> {
+    return this.http.put(`${this.api}/${id}`, empleado);
+  }
+
 }

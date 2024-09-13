@@ -35,5 +35,4 @@ ngOnInit(): void {
       this.ObtenerEmpleados();
     });
   }
-
 }

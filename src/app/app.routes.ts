@@ -17,19 +17,14 @@ export const routes: Routes = [
                 loadComponent: () => import("./crud-frontend/add-empleados/add-empleados.component"),
             },
             {
-                path: 'actualizarempleados',
+                path: 'actualizarempleados/:id',
                 title: 'Actualiazacion del Empleados',
                 loadComponent: () => import("./crud-frontend/actualizarempleados/actualizarempleados.component"),
             },
             {
-                path: 'detalle-empleado',
+                path: 'detalle-empleados/:id',
                 title: 'Detalle del Empleado',
                 loadComponent: () => import("./crud-frontend/detalle-empleados/detalle-empleados.component"),
-            },
-            {
-                path: 'eliminar-empleado',
-                title: 'Eliminar-empleado',
-                loadComponent: () => import("./crud-frontend/elimianar-empleados/elimianar-empleados.component"),
             },
             {
                 path:'', 
