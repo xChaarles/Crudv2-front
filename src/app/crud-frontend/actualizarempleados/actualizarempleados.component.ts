@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './actualizarempleados.component.html',
   styles: ``
 })
-export class ActualizarempleadosComponent {
+export default class ActualizarempleadosComponent {
 
 }

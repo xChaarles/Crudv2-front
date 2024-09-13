@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Empleado } from '../../empleado';
 import { ServiceService } from '../../servicio/service.service';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [FormsModule, RouterModule],
   templateUrl: './lista-empleados.component.html',
   styles: ``
 })
@@ -27,8 +29,11 @@ ngOnInit(): void {
       });
   }
 
-  deleteCustomer(){
-
+  eliminarEmpleado(id:number){
+    this.serviceServicio.elimnarEmpleado(id).subscribe(dato=>{
+      console.log(dato)
+      this.ObtenerEmpleados();
+    });
   }
 
 }
